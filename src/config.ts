@@ -30,7 +30,7 @@ if (!anthropicApiKey && !claudeCodeOAuthToken) {
 export const config = {
   telegramBotToken: required("TELEGRAM_BOT_TOKEN"),
   allowedUserId: Number(required("TELEGRAM_ALLOWED_USER_ID")),
-  deepgramApiKey: required("DEEPGRAM_API_KEY"),
+  deepgramApiKey: process.env.DEEPGRAM_API_KEY || undefined, // Optional now
   anthropicApiKey,
   claudeCodeOAuthToken,
   defaultProjectDir: process.env.DEFAULT_PROJECT_DIR || process.env.HOME || process.cwd(),
