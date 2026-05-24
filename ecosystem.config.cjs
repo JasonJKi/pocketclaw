@@ -4,7 +4,10 @@ module.exports = {
       name: "pocketclaw",
       script: "dist/index.js",
       cwd: __dirname,
-      env: { NODE_ENV: "production" },
+      env: {
+        NODE_ENV: "production",
+        PATH: "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+      },
       autorestart: true,
       max_restarts: 10,
       restart_delay: 3000,
